@@ -6,256 +6,1140 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>Privacy Policy — Abrax Protocol</title>
+    <title>Farizad Studio | Abrax Protocol</title>
     <meta
       name="description"
-      content="Privacy policy for Abrax Protocol by Farizad Studio."
+      content="Farizad Studio creates cinematic sci-fi games including Abrax Protocol. Explore releases, updates, and future projects."
+    />
+    <meta name="theme-color" content="#05060a" />
+    <link rel="canonical" href="https://farizad.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
     />
     <style>
+      :root {
+        color-scheme: dark;
+        --void: #05060a;
+        --panel: rgba(11, 16, 28, 0.72);
+        --panel-strong: rgba(14, 20, 35, 0.92);
+        --line: rgba(149, 197, 255, 0.2);
+        --line-hot: rgba(255, 70, 70, 0.45);
+        --text: #f4f7fb;
+        --muted: #a8b4c4;
+        --ice: #72e7ff;
+        --ember: #ff443c;
+        --amber: #ffd06a;
+        --green: #4dffbd;
+        --shadow: 0 28px 90px rgba(0, 0, 0, 0.48);
+      }
+
       * {
         box-sizing: border-box;
       }
-      html,
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
-        padding: 0;
-        background: #05060d;
-        color: #e8f7ff;
-        font-family:
-          "Segoe UI",
-          system-ui,
-          -apple-system,
-          Roboto,
-          Helvetica,
-          Arial,
-          sans-serif;
-        line-height: 1.6;
-      }
-      body {
-        background:
-          radial-gradient(
-            ellipse at top,
-            rgba(0, 234, 255, 0.08),
-            transparent 60%
-          ),
-          radial-gradient(
-            ellipse at bottom,
-            rgba(255, 92, 240, 0.06),
-            transparent 60%
-          ),
-          #05060d;
         min-height: 100vh;
+        background:
+          linear-gradient(120deg, rgba(255, 68, 60, 0.18), transparent 28%),
+          radial-gradient(
+            circle at 82% 12%,
+            rgba(114, 231, 255, 0.18),
+            transparent 28rem
+          ),
+          radial-gradient(
+            circle at 14% 62%,
+            rgba(255, 208, 106, 0.12),
+            transparent 24rem
+          ),
+          var(--void);
+        color: var(--text);
+        font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+        overflow-x: hidden;
       }
-      main {
-        max-width: 760px;
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.028) 1px,
+            transparent 1px
+          );
+        background-size: 72px 72px;
+        mask-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.7),
+          transparent 78%
+        );
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          linear-gradient(
+            transparent 0 94%,
+            rgba(114, 231, 255, 0.08) 95% 96%,
+            transparent 97%
+          ),
+          repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 0 1px,
+            transparent 1px 5px
+          );
+        background-size:
+          100% 6px,
+          100% 100%;
+        opacity: 0.34;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .page-shell {
+        width: min(1180px, calc(100% - 32px));
         margin: 0 auto;
-        padding: 48px 22px 80px;
       }
-      header {
-        border-bottom: 1px solid rgba(0, 234, 255, 0.25);
-        padding-bottom: 18px;
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(18px);
+        background: rgba(5, 6, 10, 0.72);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(114, 231, 255, 0.42);
+        background: #07090f;
+        display: block;
+        overflow: hidden;
+        box-shadow: 0 0 28px rgba(255, 68, 60, 0.28);
+      }
+
+      .brand-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .brand-name {
+        display: grid;
+        gap: 1px;
+      }
+
+      .brand-name strong {
+        font:
+          700 18px/1 "Rajdhani",
+          sans-serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .brand-name span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(12px, 2vw, 28px);
+        color: #d6dfeb;
+        font:
+          700 13px/1 "Rajdhani",
+          sans-serif;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .nav-links a {
+        position: relative;
+        padding: 8px 0;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: var(--ember);
+        transition: width 180ms ease;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after {
+        width: 100%;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid rgba(114, 231, 255, 0.34);
+        background: rgba(255, 255, 255, 0.045);
+        color: var(--text);
+        font:
+          700 13px/1 "Rajdhani",
+          sans-serif;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+        border-color: var(--ice);
+        background: rgba(114, 231, 255, 0.1);
+      }
+
+      .button.primary {
+        border-color: rgba(255, 68, 60, 0.7);
+        background: linear-gradient(135deg, #f3222c, #9e101a);
+        box-shadow: 0 18px 40px rgba(255, 68, 60, 0.2);
+      }
+
+      .hero {
+        position: relative;
+        min-height: calc(100vh - 72px);
+        display: grid;
+        align-items: end;
+        isolation: isolate;
+        overflow: hidden;
+        padding: 0;
+      }
+
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+      }
+
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 32%;
+        filter: saturate(1.12) contrast(1.08);
+        transform: scale(1.02);
+        animation: slow-drift 18s ease-in-out infinite alternate;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(5, 6, 10, 0.96),
+            rgba(5, 6, 10, 0.54) 48%,
+            rgba(5, 6, 10, 0.2)
+          ),
+          linear-gradient(
+            0deg,
+            rgba(5, 6, 10, 1),
+            rgba(5, 6, 10, 0.08) 58%,
+            rgba(5, 6, 10, 0.32)
+          );
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: minmax(0, 680px) minmax(240px, 360px);
+        gap: clamp(24px, 6vw, 72px);
+        align-items: end;
+        padding: clamp(76px, 10vw, 130px) 0 clamp(44px, 7vw, 86px);
+      }
+
+      .kicker {
+        color: var(--ice);
+        font:
+          700 14px/1.2 "Rajdhani",
+          sans-serif;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        margin: 0 0 16px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 18px;
+        font:
+          800 clamp(48px, 11vw, 132px) / 0.86 "Rajdhani",
+          sans-serif;
+        letter-spacing: 0;
+        max-width: 780px;
+        text-transform: uppercase;
+      }
+
+      .hero-copy {
+        max-width: 660px;
+        color: #dbe5f2;
+        font-size: clamp(17px, 2vw, 22px);
+        line-height: 1.55;
         margin-bottom: 28px;
       }
-      .eyebrow {
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .signal-panel {
+        position: relative;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(9, 14, 24, 0.84),
+          rgba(10, 14, 24, 0.56)
+        );
+        box-shadow: var(--shadow);
+        padding: 22px;
+        overflow: hidden;
+      }
+
+      .signal-panel::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--ember),
+          var(--amber),
+          var(--ice)
+        );
+      }
+
+      .signal-panel .label {
+        color: var(--muted);
+        font:
+          700 12px/1 "Rajdhani",
+          sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .signal-panel strong {
+        display: block;
+        font:
+          700 clamp(26px, 4vw, 42px) / 0.95 "Rajdhani",
+          sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .signal-panel p {
+        color: var(--muted);
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      section {
+        padding: clamp(58px, 8vw, 108px) 0;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: end;
+        margin-bottom: clamp(26px, 4vw, 44px);
+      }
+
+      .section-head h2 {
+        font:
+          800 clamp(34px, 6vw, 70px) / 0.92 "Rajdhani",
+          sans-serif;
+        text-transform: uppercase;
+        max-width: 700px;
+        margin-bottom: 0;
+      }
+
+      .section-head p {
+        color: var(--muted);
+        line-height: 1.65;
+        max-width: 430px;
+        margin-bottom: 0;
+      }
+
+      .featured-game {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+        gap: clamp(22px, 4vw, 44px);
+        align-items: stretch;
+      }
+
+      .game-art {
+        position: relative;
+        min-height: 520px;
+        border: 1px solid var(--line-hot);
+        background: #090b11;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .game-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .game-art::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(5, 6, 10, 0.6), transparent 46%);
+      }
+
+      .game-info {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        padding: clamp(24px, 4vw, 42px);
+        display: grid;
+        align-content: center;
+        box-shadow: var(--shadow);
+      }
+
+      .status-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .tag {
+        border: 1px solid rgba(114, 231, 255, 0.28);
+        background: rgba(114, 231, 255, 0.06);
+        color: #c8f6ff;
+        padding: 8px 10px;
+        font:
+          700 12px/1 "Rajdhani",
+          sans-serif;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .game-info h3 {
+        font:
+          800 clamp(36px, 6vw, 68px) / 0.92 "Rajdhani",
+          sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .game-info p {
+        color: #d3deea;
+        line-height: 1.7;
+        font-size: 17px;
+      }
+
+      .spec-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        margin: 24px 0;
+      }
+
+      .spec {
+        background: rgba(5, 6, 10, 0.74);
+        padding: 16px 14px;
+      }
+
+      .spec span {
+        display: block;
+        color: var(--muted);
         font-size: 12px;
-        letter-spacing: 4px;
-        color: #00eaff;
+        margin-bottom: 4px;
+      }
+
+      .spec strong {
+        font:
+          700 16px/1.15 "Rajdhani",
+          sans-serif;
         text-transform: uppercase;
-        margin: 0 0 6px 0;
       }
-      h1 {
-        font-size: clamp(28px, 5vw, 40px);
-        margin: 0 0 8px 0;
-        color: #fff;
-        letter-spacing: 1px;
-        text-shadow: 0 0 18px rgba(0, 234, 255, 0.45);
+
+      .library-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
       }
-      .updated {
-        color: #8aa1b8;
-        font-size: 13px;
-        margin: 0;
+
+      .game-card {
+        position: relative;
+        min-height: 340px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--panel-strong);
+        display: grid;
+        align-content: end;
+        padding: 22px;
       }
-      h2 {
-        color: #00eaff;
-        font-size: 18px;
-        letter-spacing: 2px;
+
+      .game-card img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+        transition:
+          transform 380ms ease,
+          opacity 380ms ease;
+      }
+
+      .game-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(5, 6, 10, 0.96),
+          rgba(5, 6, 10, 0.18)
+        );
+      }
+
+      .game-card:hover img,
+      .game-card:focus-within img {
+        transform: scale(1.05);
+        opacity: 0.82;
+      }
+
+      .game-card-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .game-card h3 {
+        font:
+          800 30px/0.94 "Rajdhani",
+          sans-serif;
         text-transform: uppercase;
-        margin-top: 36px;
         margin-bottom: 10px;
-        text-shadow: 0 0 8px rgba(0, 234, 255, 0.3);
       }
-      p,
-      li {
-        color: #cfdbe8;
-        font-size: 15px;
+
+      .game-card p {
+        color: var(--muted);
+        line-height: 1.55;
+        margin-bottom: 18px;
       }
-      ul {
-        padding-left: 22px;
+
+      .soon {
+        border-style: dashed;
+        background:
+          linear-gradient(135deg, rgba(114, 231, 255, 0.08), transparent),
+          rgba(9, 12, 20, 0.72);
       }
-      a {
-        color: #ffd97a;
-        text-decoration: none;
-        border-bottom: 1px dotted rgba(255, 217, 122, 0.5);
+
+      .studio-band {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(90deg, rgba(255, 68, 60, 0.1), transparent),
+          rgba(255, 255, 255, 0.025);
       }
-      a:hover {
-        color: #fff;
-        border-bottom-color: #fff;
+
+      .studio-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+        gap: clamp(28px, 5vw, 72px);
+        align-items: center;
       }
-      .card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(0, 234, 255, 0.15);
-        border-radius: 10px;
-        padding: 18px 22px;
-        margin-top: 18px;
+
+      .studio-grid h2 {
+        font:
+          800 clamp(34px, 6vw, 74px) / 0.92 "Rajdhani",
+          sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 18px;
       }
-      footer {
-        margin-top: 56px;
-        padding-top: 18px;
-        border-top: 1px solid rgba(0, 234, 255, 0.18);
-        color: #6e8295;
-        font-size: 13px;
-        text-align: center;
+
+      .studio-grid p {
+        color: #d4deea;
+        font-size: 18px;
+        line-height: 1.72;
       }
-      footer a {
-        color: #8ad9ff;
-        border-bottom: none;
+
+      .principles {
+        display: grid;
+        gap: 12px;
+      }
+
+      .principle {
+        border-left: 3px solid var(--ember);
+        background: rgba(5, 6, 10, 0.48);
+        padding: 18px 20px;
+      }
+
+      .principle strong {
+        display: block;
+        font:
+          700 22px/1 "Rajdhani",
+          sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+
+      .principle span {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .contact-strip {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          135deg,
+          rgba(14, 20, 35, 0.9),
+          rgba(8, 10, 16, 0.82)
+        );
+        box-shadow: var(--shadow);
+        padding: clamp(24px, 5vw, 44px);
+      }
+
+      .contact-strip h2 {
+        font:
+          800 clamp(32px, 5vw, 58px) / 0.95 "Rajdhani",
+          sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .contact-strip p {
+        color: var(--muted);
+        margin-bottom: 0;
+        line-height: 1.6;
+        max-width: 620px;
+      }
+
+      .site-footer {
+        padding: 32px 0 44px;
+        color: #8794a6;
+        border-top: 1px solid var(--line);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+
+      .footer-inner a {
+        color: #b8eaff;
+      }
+
+      @keyframes slow-drift {
+        from {
+          transform: scale(1.02) translate3d(0, 0, 0);
+        }
+        to {
+          transform: scale(1.08) translate3d(1.5%, -1%, 0);
+        }
+      }
+
+      @media (max-width: 980px) {
+        .hero-content,
+        .featured-game,
+        .studio-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .signal-panel {
+          max-width: 520px;
+        }
+
+        .library-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page-shell {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .site-header {
+          position: sticky;
+          background: rgba(5, 6, 10, 0.9);
+        }
+
+        .nav {
+          min-height: auto;
+          padding: 10px 0 12px;
+          gap: 10px;
+          flex-direction: column;
+        }
+
+        .brand {
+          width: 100%;
+        }
+
+        .brand-mark {
+          width: 36px;
+          height: 36px;
+          font-size: 16px;
+        }
+
+        .brand-name strong {
+          font-size: 16px;
+        }
+
+        .nav-links {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 6px;
+          font-size: 11px;
+          letter-spacing: 0.08em;
+        }
+
+        .nav-links a {
+          min-height: 34px;
+          display: grid;
+          place-items: center;
+          border: 1px solid rgba(149, 197, 255, 0.16);
+          background: rgba(255, 255, 255, 0.035);
+          padding: 0 4px;
+        }
+
+        .nav-links a::after {
+          display: none;
+        }
+
+        .hero {
+          min-height: 0;
+          display: block;
+        }
+
+        .hero-media {
+          position: relative;
+          inset: auto;
+          z-index: 0;
+          height: clamp(210px, 58vw, 320px);
+          border-bottom: 1px solid rgba(255, 68, 60, 0.28);
+          background: #030407;
+        }
+
+        .hero-media img {
+          object-fit: cover;
+          object-position: center top;
+          animation: none;
+          transform: none;
+        }
+
+        .hero-content {
+          position: relative;
+          z-index: 1;
+          gap: 18px;
+          padding: 26px 0 42px;
+        }
+
+        .hero::after {
+          z-index: 0;
+          pointer-events: none;
+          background:
+            linear-gradient(
+              180deg,
+              transparent 0 30%,
+              rgba(5, 6, 10, 0.74) 42%,
+              rgba(5, 6, 10, 1) 58%
+            ),
+            linear-gradient(90deg, rgba(5, 6, 10, 0.18), rgba(5, 6, 10, 0.08));
+        }
+
+        .kicker {
+          font-size: 12px;
+          letter-spacing: 0.18em;
+          margin-bottom: 10px;
+        }
+
+        h1 {
+          font-size: clamp(48px, 14vw, 72px);
+          line-height: 0.9;
+          margin-bottom: 14px;
+        }
+
+        .hero-copy {
+          font-size: 16px;
+          line-height: 1.5;
+          margin-bottom: 18px;
+        }
+
+        .hero-actions {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .hero-actions .button {
+          width: auto;
+          min-height: 44px;
+          padding: 0 10px;
+          font-size: 11px;
+          letter-spacing: 0.07em;
+        }
+
+        .signal-panel {
+          display: none;
+        }
+
+        section {
+          padding: 48px 0;
+        }
+
+        .section-head {
+          gap: 12px;
+          margin-bottom: 22px;
+        }
+
+        .section-head h2,
+        .studio-grid h2,
+        .contact-strip h2 {
+          font-size: clamp(34px, 10vw, 50px);
+          line-height: 0.96;
+        }
+
+        .section-head p,
+        .studio-grid p,
+        .contact-strip p,
+        .game-info p {
+          font-size: 15px;
+          line-height: 1.58;
+        }
+
+        .section-head,
+        .contact-strip {
+          display: grid;
+        }
+
+        .game-art {
+          min-height: 0;
+          aspect-ratio: 1 / 1;
+        }
+
+        .game-info {
+          padding: 20px;
+        }
+
+        .game-info h3 {
+          font-size: clamp(36px, 11vw, 54px);
+        }
+
+        .status-row {
+          gap: 7px;
+          margin-bottom: 16px;
+        }
+
+        .tag {
+          padding: 7px 8px;
+          font-size: 11px;
+          letter-spacing: 0.08em;
+        }
+
+        .library-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .spec-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          margin: 18px 0;
+        }
+
+        .spec {
+          padding: 12px 8px;
+        }
+
+        .spec strong {
+          font-size: 13px;
+        }
+
+        .game-card {
+          min-height: 260px;
+          padding: 18px;
+        }
+
+        .game-card h3 {
+          font-size: 28px;
+        }
+
+        .principle {
+          padding: 16px;
+        }
+
+        .contact-strip {
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 440px) {
+        .brand-name span {
+          display: none;
+        }
+
+        .hero-actions {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .hero-actions .button {
+          width: auto;
+        }
+
+        .hero-media {
+          height: 210px;
+        }
+
+        h1 {
+          font-size: 48px;
+        }
+
+        .game-card {
+          min-height: 240px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <header>
-        <p class="eyebrow">Farizad Studio</p>
-        <h1>Privacy Policy</h1>
-        <p class="updated">
-          Abrax Protocol &middot; Last updated: August&nbsp;16,&nbsp;2026
-        </p>
-      </header>
+    <header class="site-header">
+      <nav class="nav page-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Farizad Studio home">
+          <span class="brand-mark"
+            ><img src="logo-darkbackground.webp" alt=""
+          /></span>
+          <span class="brand-name">
+            <strong>Farizad Studio</strong>
+            <span>Independent single developer game studio</span>
+          </span>
+        </a>
+        <div class="nav-links" aria-label="Page sections">
+          <a href="#games">Games</a>
+          <a href="#studio">Studio</a>
+          <a href="#contact">Contact</a>
+          <a href="privacy-policy.html">Privacy</a>
+        </div>
+      </nav>
+    </header>
 
-      <section>
-        <h2>About this Policy</h2>
-        <p>
-          This privacy policy explains how the mobile game
-          <strong>Abrax Protocol</strong> ("the App", "we", "us"), developed by
-          <strong>Farizad Studio</strong>, handles information when you play.
-          The App is distributed through the Google Play Store. By installing or
-          playing the App, please review the practices described here.
-        </p>
-      </section>
-
-      <section>
-        <h2>Information We Collect</h2>
-        <div class="card">
-          <p>
-            <strong
-              >We do not collect, store, or transmit any personally identifiable
-              information ourselves.</strong
-            >
-          </p>
-          <p>
-            Gameplay data, settings, progression, custom music, and custom arena
-            images are stored locally using app storage, localStorage, or
-            IndexedDB. We do not operate an account, login, analytics, or
-            developer-controlled cloud-save service.
-          </p>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="newgame.png" alt="Abrax Protocol key art" />
+        </div>
+        <div class="hero-content page-shell">
+          <div>
+            <p class="kicker">Games from Farizad Studio</p>
+            <h1 id="hero-title">Abrax Protocol</h1>
+            <p class="hero-copy">
+              Dodge and survive, fighting hostile enemies in a cinematic universe built for
+              speed, spectacle, and replayable pressure.
+            </p>
+            <div class="hero-actions">
+              <!-- UPDATE LATER: replace #games with your Google Play link when the store page is live. -->
+              <a class="button primary" href="#games">Explore the Game</a>
+              <a class="button" href="#contact">Work With Us</a>
+            </div>
+          </div>
+          <aside class="signal-panel" aria-label="Studio signal">
+            <div class="label">Now featured</div>
+            <strong>More hostile enemies, more intense gameplay.</strong>
+            <p>
+              We are eagerly working on the next update for Abrax Protocol, and we want to keep you in the loop. Just wait and see what we can do.
+            </p>
+          </aside>
         </div>
       </section>
 
-      <section>
-        <h2>Third-Party Services</h2>
-        <p>
-          This App uses Google AdMob to provide interstitial and rewarded ads.
-          Depending on your region, device settings, consent choices, and
-          Google's configuration, Google may process device identifiers, IP
-          address, advertising interactions, diagnostics, and approximate
-          location derived from IP to deliver, measure, prevent fraud in, and
-          improve ads.
-        </p>
-        <p>
-          Google's handling of this data is governed by its
-          <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-          <a href="https://policies.google.com/technologies/partner-sites"
-            >How Google uses information from apps that use its services</a
-          >. Other than AdMob, the App does not include an analytics SDK,
-          account system, or cloud-save service.
-        </p>
+      <section id="games" class="page-shell" aria-labelledby="games-title">
+        <div class="section-head">
+          <h2 id="games-title">
+            Games that keep players coming back for more
+          </h2>
+          <p>
+            We as Farizad Studio focus on punchy, atmospheric games that are easy to pick up, but hard to put down. The goal is to make every single second you play our games enjoyable and make you addicted to the experience we offer.
+          </p>
+        </div>
+
+        <article class="featured-game">
+          <div class="game-art">
+            <img
+              src="abrax-protocol.png"
+              alt="Abrax Protocol key art with a starship in front of a molten planet"
+            />
+          </div>
+          <div class="game-info">
+            <div class="status-row">
+              <span class="tag">Featured Release</span>
+              <span class="tag">Android</span>
+              <span class="tag">Sci-fi</span>
+            </div>
+            <h3>Abrax Protocol</h3>
+            <p>
+              A high-intensity space combat experience across survival, time
+              trial, and boss-focused modes. Built around fast reads, stylish
+              impacts, unlockable routes, and a world that looks massive even on
+              a small screen.
+            </p>
+            <div class="spec-grid" aria-label="Abrax Protocol details">
+              <div class="spec">
+                <span>Genre</span>
+                <strong>Action Arcade</strong>
+              </div>
+              <div class="spec">
+                <span>Platform</span>
+                <strong>Android</strong>
+              </div>
+              <div class="spec">
+                <span>Status</span>
+                <strong>Active</strong>
+              </div>
+            </div>
+            <!-- UPDATE LATER: put your real Google Play URL in this href. Example: href="https://play.google.com/store/apps/details?id=your.package.name" -->
+            <a class="button primary" href="#contact">Get Launch Updates</a>
+          </div>
+        </article>
       </section>
 
-      <section>
-        <h2>Advertising</h2>
-        <p>
-          Abrax Protocol displays a full-screen interstitial after every three
-          completed runs. Rewarded ads are optional and are shown only when you
-          request an in-game reward or unlock feature. Ad availability and
-          frequency may change in later releases; this policy will be updated if
-          the data practices change.
-        </p>
+      
+       
+      
+
+      <section id="studio" class="studio-band" aria-labelledby="studio-title">
+        <div class="studio-grid page-shell">
+          <div>
+            <p class="kicker">The studio</p>
+            <h2 id="studio-title">Small team energy. (Actually currently only one developer.) Big-screen ambition.</h2>
+            <p>
+              Farizad Studio builds games with cinematic sci-fi and political/history themes in hope of creating a unique and memorable experience for players. The studio is currently a one-person operation, but the goal is to grow into a small team of passionate developers who can bring even more ambitious projects to life.
+            </p>
+          </div>
+          <div class="principles" aria-label="Studio principles">
+            <div class="principle">
+              <strong>Atmosphere First</strong>
+              <span
+                >Worlds, menus, audio, and motion all push the same
+                fantasy.</span
+              >
+            </div>
+            <div class="principle">
+              <strong>Built for ALL devices</strong>
+              <span
+                >Fast loads, clear contrast, strong touch targets, and flexible
+                layouts.</span
+              >
+            </div>
+            <div class="principle">
+              <strong>Replayable Pressure</strong>
+              <span
+                >Short sessions with score chase, mode mastery, and escalating
+                stakes. We want you to be entertained.</span
+              >
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2>Children's Privacy</h2>
-        <p>
-          The App is not directed at children under the age of 13. We do not
-          knowingly collect any information from children. If you are a parent
-          or guardian and believe your child has provided personal information
-          through the App's third-party services, please contact us so we can
-          take appropriate action.
-        </p>
-      </section>
-
-      <section>
-        <h2>Permissions</h2>
-        <p>The App may request the following Android permissions:</p>
-        <ul>
-          <li>
-            <strong>Internet</strong> &mdash; required for serving
-            advertisements.
-          </li>
-        </ul>
-        <p>
-          The App does not request broad access to contacts, photos, microphone,
-          camera, or precise location. If you choose custom music or a custom
-          arena background, Android's system file picker lets you select that
-          specific file. The selected file is processed and stored locally and
-          is not uploaded to us.
-        </p>
-      </section>
-
-      <section>
-        <h2>Data Retention &amp; Deletion</h2>
-        <p>
-          Because we do not collect data on our own servers, there is no
-          server-side data to retain or delete. Primary game data is stored in
-          the App's local storage and is removed when you clear the App's
-          storage. Uninstalling normally removes that local copy. Android backup
-          or device-transfer services may separately retain or restore app data
-          according to your device and backup-provider settings; those services
-          are governed by the provider's own privacy policy.
-        </p>
-      </section>
-
-      <section>
-        <h2>Changes to this Policy</h2>
-        <p>
-          We may update this policy from time to time, for example to reflect
-          new features or new third-party services. The "Last updated" date at
-          the top of this page will always reflect the most recent revision.
-          Continued use of the App after a change constitutes acceptance of the
-          updated policy.
-        </p>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>
-          For privacy questions, requests, or concerns, please contact:<br /><a
-            href="mailto:contact@farizadstudio.com"
-            >contact@farizadstudio.com</a
+      <section id="contact" class="page-shell" aria-labelledby="contact-title">
+        <div class="contact-strip">
+          <div>
+            <h2 id="contact-title">Anything to reach us about?</h2>
+            <p>
+              What are you waiting for? We are always open to new ideas, collaborations, and feedback. Reach out to us and let's make something amazing together. Me and you.
+            </p>
+          </div>
+          <!-- UPDATE LATER: replace this email with your real studio support email. -->
+          <a class="button primary" href="mailto:contact@farizadstudio@gmail.com"
+            >Contact Farizad Studio</a
           >
-        </p>
+        </div>
       </section>
-
-      <footer>&copy; 2026 Farizad Studio</footer>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner page-shell">
+        <span>Copyright 2026 Farizad Studio. All rights reserved.</span>
+        <span><a href="privacy-policy.html">Privacy Policy</a></span>
+      </div>
+    </footer>
   </body>
 </html>
